@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A Fun Survey to find the popular christmas entertainment">
+        <title>Christmas</title>
+        <style>
+            
+            * {box-sizing: border-box;}
+            .user_info label{
+                display:inline-block;
+              
+                text-align:left;
+                padding: 20px 6px;
+             }
+            textarea {
+                width: 80%;
+                height: 100px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                background-color: #f8f8f8;
+                resize: none;
+            }
+            body{
+                background-color: rgb(252, 244, 237);
+            }
+
+            select {
+                width: 30%;
+                
+                border-radius: 4px;
+                background-color: #f1f1f1;
+            }
+         
+        </style>
+    </head>
+     <body>
+         <h1>Christmas Survey</h1>
+        <form method="post" action="feedback.php" id="Survey_form">
+            <fieldset>
+                <div class="user_info">
+                    <label for = "firstName">First Name: </label>
+                    <input type="text" id="firstName" name="firstName">
+
+                    <label for = "lastName">Last Name: </label>
+                    <input type="text" id="lastName" name="lastName">
+
+                    <label for ="email">E-mail Address: </label>
+                    <input type="email" required id="email" name="email">
+
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+                    <p>Please select your age:</p>
+                    <input type="radio" id="age1" name="age" value="30">
+                    <label for="age1">0 - 30</label><br>
+                    <input type="radio" id="age2" name="age" value="60">
+                    <label for="age2">31 - 60</label><br>  
+                    <input type="radio" id="age3" name="age" value="100">
+                    <label for="age3">61 - 100</label><br><br>
+                    
+                
+            </fieldset>
+            <fieldset>
+                <legend>Your Favorite Christmas Song</legend>
+                <label for="Music">Song </label>
+                <select id="county" name="county">
+                    <option value="Feliz Navidad">Feliz Navidad</option>
+                    <option value="Last Christmas">Last Christmas</option>
+                    <option value="Happy Xmas (War Is Over)">Happy Xmas (War Is Over)</option>
+                    <option value="A Holly Jolly Christmas">A Holly Jolly Christmas</option>
+                    <option value="Rockin Around The Christmas Tree"> Rocking Around The Christmas Tree</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Favorite Activities During Christmas</legend>
+                    <label for = "Gym">Working Out</label><input type = "checkbox" id="Gym" name="Gym"
+                    value="1">
+                    <label for = "Movies">Watching Movies</label><input type = "checkbox" id="Movies" name="Movies"
+                    value="2">
+                    <label for = "Shopping">Shopping</label><input type = "checkbox" id="Shopping"
+                    name="Shopping" value="3">
+                    <label for = "Baking">Baking</label><input type = "checkbox" id="Baking"
+                    name="Baking" value="4">
+            </fieldset>
+
+            <fieldset>
+                <legend>What is the official Christmas date?</legend>
+                <label for="christmas">Date:</label>
+                <input type="date" id="christmas" name="christmas">
+            </fieldset>
+
+            <fieldset>
+                <legend>Traveling During Christmas Time</legend>
+                <p>Do you enjoy traveling in Christmas?</p>
+                <label for = "help_yes">Yes</label>
+                <input type="radio" id="help_yes" name="help" value="yes">
+                <!--id is not same as the name here-->
+                <label for = "help_no">No</label>
+                <input type="radio" id="help_no" name="help" value="no"><br><br>
+                <label for="favoritespot">What are Your Favorite Traveling Spots?</label>
+                <textarea id="favoritespot" name="user_favoritespot"></textarea>
+            </fieldset>
+           
+                <button type="reset">Clear</button>
+                <button type="submit">Enter</button>
+        </form>
+        <footer>
+            <p>Created by: Hiva Hakimzadeh on 11/2/2022</p>
+        </footer>
+    </body>
+    
+</html>
